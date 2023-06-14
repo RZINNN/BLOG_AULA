@@ -2,6 +2,13 @@
 include './../app/configuracao.php';
 include './../app/Libraries/Rota.php';
 include './../app/Libraries/Controller.php';
+include './../app/Libraries/Database.php';
+
+$db = new Database;
+$usuarioID = 10;
+$titulo = 'Titulo do post';
+$texto = 'Texto do post';
+$db->query("INSERT INTO posts(usuario_id, titulo, texto)VALUES(:usurio_id, :titulo, :texto)");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
